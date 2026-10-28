@@ -4,7 +4,7 @@
 
 ## Read this first
 
-This repository currently provides a technical case study and implementation walkthroughs with inline code. It is **not yet a one-click deployment package**. The exact deployed notebook, pipeline and SQL object exports have been requested and will be added after verification. Code excerpts are labelled where they omit surrounding implementation. Do not mistake illustrative fragments for a complete schema deployment.
+This repository currently provides a technical case study and implementation walkthroughs with inline code. It is **not yet a one-click deployment package**. Two notebook exports have been reviewed: [reference refresh](notebooks/reference-walkthrough.md) and [Stop and Search profiling](notebooks/stop-search-profile-review.md). The latter is not the raw-to-Bronze writer. Pipeline, SQL object and actual Bronze writer exports remain requested. Code excerpts are labelled where they omit surrounding implementation. Do not mistake illustrative fragments for a complete schema deployment.
 
 ## Prerequisites
 

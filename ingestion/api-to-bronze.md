@@ -70,7 +70,7 @@ The parent was last left pointing at the retry plan. Review its Lookup before re
 
 ## Raw-to-Bronze boundary
 
-`NB_Police_Load_Bronze_StopSearch` produces one Bronze row per array element, retaining the payload and its position. The raw files remain the authoritative response artefacts; parsing and JSON reserialization need not preserve original byte formatting.
+The implemented Bronze table contains one row per array element, retaining the payload and its position. However, the newly supplied notebook named `NB_Police_Load_Bronze_StopSearch` contains profiling queries rather than the writer. See the [verified export review](../notebooks/stop-search-profile-review.md); the actual raw-to-Bronze writer remains requested. The raw files remain the authoritative response artefacts; parsing and JSON reserialization need not preserve original byte formatting.
 
 During validation, a response contained a UTF-8 BOM before the opening array bracket. Strip only the leading BOM before JSON parsing. The project checked every planned file as valid array content; all loaded files were non-empty.
 

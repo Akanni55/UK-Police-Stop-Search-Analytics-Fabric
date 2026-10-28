@@ -90,3 +90,7 @@ Keep raw files, load/retry-plan tables and called procedures while dependencies 
 ## Scheduling boundary
 
 No fully automated monthly API-to-report schedule is documented as complete. Do not enable a historical backfill schedule accidentally. Before scheduling, add source availability refresh, an ingestion success ledger, safe Bronze updates, shared run correlation, no-overlap controls and report-model refresh handling. Existing SQL dimensions use serial key allocation.
+
+## Scope alignment check from supplied evidence
+
+The reviewed Silver audit shows Metropolitan / August 2025 (14,899 records), while the Gold audit captures show NULL force/month (full-scope 1,436,597 records). Verify that `Invoke_Load_Gold` passes both parent parameters and that the Gold fact wrapper receives them through its dynamic expressions. A successful full Gold load is correct for the full scope, but does not demonstrate the intended selected-scope propagation. Avoid describing this evidence as a successful matched-scope end-to-end test until a fresh scoped Gold audit confirms it.

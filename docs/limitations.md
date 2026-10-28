@@ -25,8 +25,9 @@ Historical availability-driven API extraction; retained force/month JSON; Bronze
 - Source-to-Bronze ingestion is separate from the tested Bronze-to-Gold processing parent.
 - No automatic new-month discovery-to-report schedule or ingestion success watermark has been demonstrated.
 - Current raw paths do not retain immutable versions for every correction.
-- Full deployed notebook/pipeline/procedure exports and selected evidence images are still pending.
-- Bronze replay write behaviour requires inspection of the actual notebook export.
+- Two notebook exports and seven screenshots have been reviewed. Public screenshot publication awaits approval; pipeline/procedure exports and the actual raw-to-Bronze writer are still pending.
+- Supplied Silver audits are scoped but Gold audits are full-scope; selected-scope propagation into Gold needs verification.
+- The supplied Stop and Search notebook is a profiling notebook, not a writer, and its final profiling query uses the wrong FROM source for its CTE aliases. Actual Bronze replay write behaviour remains unverified.
 - Manual dimension key allocation requires serial execution; the database DDL does not enforce key uniqueness.
 - Audit wrappers cover Silver and Gold fact loads; dimension stages are monitored in pipeline history.
 - Cancellation can leave Running audit rows. Data commits and audit completion are not a distributed exactly-once transaction.

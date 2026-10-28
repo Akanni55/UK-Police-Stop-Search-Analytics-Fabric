@@ -2,21 +2,27 @@
 
 [Back to project](../README.md)
 
-The narrative and inline code are in place. The following owner-supplied artefacts will make implementation details independently inspectable.
+## Received and reviewed
 
-| Requested artefact | Intended placement |
-|---|---|
-| API ingestion parent and child canvases, with parameters | Ingestion walkthrough |
-| Reference pipeline canvas | Ingestion walkthrough |
-| Successful Silver/Gold processing parent run | Main README and validation |
-| Gold four-activity canvas | Gold walkthrough |
-| Sample Silver and Gold audit query results | Operations and validation |
-| Three-layer reconciliation result | Validation |
-| Full semantic-model relationship diagram | Power BI page |
-| Report overview and supporting page screenshots | README and Power BI page |
-| Final published report URL | README report link and publication status |
-| Both sanitised Bronze notebook exports | Verify and expand inline Python walkthroughs |
-| Sanitised pipeline definitions | Verify exact expressions, parameters and dependencies |
-| Current DDL and all load/wrapper procedure definitions | Expand snippets into complete inline deployment walkthroughs |
+- Processing-parent successful execution screenshot.
+- Gold four-activity successful execution screenshot.
+- Historical ingestion recovery screenshot.
+- Semantic-model relationship screenshot.
+- Silver audit screenshot (14,899 scoped records).
+- Gold audit screenshot (1,436,597 full-scope records).
+- API extraction child canvas and parameter screenshot.
+- Reference notebook export: code reproduced inline in the [verified walkthrough](../notebooks/reference-walkthrough.md).
+- Stop and Search notebook export: currently profiling code, reviewed [here](../notebooks/stop-search-profile-review.md).
 
-Do not include passwords, tokens, personal connection credentials or unnecessary tenant/workspace IDs. Existing conversation screenshots are not automatically suitable public evidence; select readable captures of the implemented result. No existing user-uploaded image has been published by this documentation build.
+Screenshot publication to the public repository is pending explicit approval because Fabric metadata is visible. No screenshot images are embedded until that approval is resolved.
+
+## Still requested
+
+1. Actual raw-to-Bronze writer code; the supplied Stop and Search notebook does not contain it.
+2. Reference pipeline canvas and exported pipeline definitions.
+3. Current Warehouse table DDL and stored-procedure definitions.
+4. Three-layer reconciliation result capture, if available.
+5. A scoped Gold audit after confirming parent parameter propagation.
+6. Final report screenshots and the published report URL when ready.
+
+Exports must be sanitised for credentials and unnecessary tenant-specific connection identifiers. Notebook outputs and Fabric attachment metadata are not included in the inline walkthroughs.

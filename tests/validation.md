@@ -81,3 +81,21 @@ The sequential historical extraction took many hours and required a four-request
 - Sanitised notebook, pipeline and stored-procedure exports.
 
 This repository intentionally does not embed unrelated screenshots or fabricate a report preview.
+
+## Additional owner-supplied evidence reviewed
+
+Seven screenshots were reviewed on 28 October 2026; images are not yet published in the repository pending approval for public metadata exposure.
+
+| Capture | What it establishes |
+|---|---|
+| Processing parent | Both child invocations succeeded; displayed activity durations 46s for Silver and 49s for Gold |
+| Gold child | Date, Force, profile dimensions and fact activities succeeded in order |
+| Ingestion parent | A short successful recovery execution, not the entire 1,427-request historical backfill |
+| Semantic model | Five one-to-many dimension-to-fact relationships are visible |
+| Silver audit | Metropolitan / 2025-08, 14,899 Bronze and Silver rows, Succeeded |
+| Gold audit | NULL force/month scope, 1,436,597 Silver and Gold rows, Succeeded |
+| API child | One Copy activity; string parameters p_force and p_month, example defaults northumbria / 2026-08 |
+
+**Parameter propagation finding:** the Silver audit is scoped while the Gold audit entries are full-scope. These captures confirm correct loads, but do not prove the processing parent passed identical scope parameters to both children. Inspect parent-to-Gold mapping and the Gold fact wrapper inputs, then rerun the selected scope to establish aligned propagation. This is a configuration check, not evidence of a row-count error.
+
+The displayed timings describe individual captures and are not comparative performance benchmarks.
