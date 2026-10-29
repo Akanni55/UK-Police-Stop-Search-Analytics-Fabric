@@ -100,3 +100,7 @@ The reference export confirms forces Copy → availability Copy → Lookup month
 Raw retention allows transformation recovery without another API extraction. Before rerunning the Bronze notebook, inspect its write mode: the deployed export has not yet been attached here, so this documentation does not assert that its append/overwrite behaviour is incremental-safe. Scope-safe Silver and Gold replacement is implemented separately.
 
 Source revisions are not versioned immutably by the current force/month path. Add extraction versions, checksums and a successful ingestion ledger before claiming historical revision tracking or fully incremental source ingestion. Consult the [official call-limit guidance](https://data.police.uk/docs/api-call-limits/) before changing concurrency; no throughput improvement has been benchmarked here.
+
+## Complete writer reconstruction now available
+
+A [complete reconstructed Bronze writer](../notebooks/bronze-writer-reconstruction.md) now implements the established lineage contract from retained JSON. It is not the recovered historical notebook: the supplied export lacks those cells. It performs a guarded full-snapshot overwrite and is not an incremental ingestion component. No existing Fabric data was changed. Validate in an isolated Lakehouse before adoption; no further owner file search is required for this documentation pass.

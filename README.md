@@ -18,6 +18,8 @@ From a public API to an audited dimensional warehouse: **1,427 force/month files
 | [Verified notebook walkthroughs](notebooks/reference-walkthrough.md) | Reference refresh code and [profiling export review](notebooks/stop-search-profile-review.md) |
 | [Verified pipeline definitions](ingestion/verified-pipelines.md) | Six sanitised inline definitions and the confirmed Gold scope correction |
 | [API ingestion walkthrough](ingestion/api-to-bronze.md) | Availability-driven extraction, expressions, raw retention and recovery |
+| [Complete inline SQL procedures](implementation/complete-procedures.md) | Seven complete reconstructions from the project build history |
+| [Reconstructed Bronze writer](notebooks/bronze-writer-reconstruction.md) | Complete raw-file parser and writer, clearly labelled and not deployed |
 | [SQL Silver transformation](implementation/silver.md) | JSON parsing, UK time conversion, scoped replacement and reconciliation |
 | [Dimensional warehouse](implementation/gold.md) | Dimension maintenance, null-safe joins and fact loading |
 | [Data dictionary](docs/data-dictionary.md) | Grain, columns, measures and lineage |

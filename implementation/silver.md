@@ -13,7 +13,7 @@ FROM [LH_Uk_Police_Crime].[bronze].[stopsearch];
 
 The lowercase table name matters in the implemented environment. An earlier `StopSearch` reference failed to resolve. The repair was to inspect `INFORMATION_SCHEMA.TABLES`, use the actual identifier and roll back the open transaction before retrying.
 
-The snippets below are implementation excerpts and explanatory reductions of the developed procedures, not a claim that an arbitrary excerpt can replace the full deployed procedure. Complete exported procedure definitions remain an evidence request.
+The snippets below are implementation excerpts and explanatory reductions of the developed procedures, not a claim that an arbitrary excerpt can replace the full deployed procedure. All seven full definitions are now provided as [clearly labelled reconstructions](complete-procedures.md). They are not live Warehouse exports.
 
 ## Parse once, convert deliberately
 

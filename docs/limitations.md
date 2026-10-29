@@ -48,3 +48,7 @@ Historical availability-driven API extraction; retained force/month JSON; Bronze
 8. Implement environment-specific deployment, access controls and operational alerts as separate tested changes.
 
 This roadmap adapts the original broader crime-intelligence assignment to the delivered Stop and Search project. Unimplemented assignment requirements are not presented as achievements.
+
+## Reconstructed implementation coverage
+
+Complete SQL and Bronze writer code is now available inline. These are reconstructed implementations, not verified live exports; they have not been deployed or executed in Fabric by this documentation update. Local checks cover Python syntax, JSON parsing and column-contract shape only. The Bronze reconstruction replaces the complete target snapshot and requires isolation/backup validation before use. The Gold scope mapping correction remains documented but unconfirmed in Fabric. No additional owner artefacts are required to complete this documentation pass; future exports can strengthen provenance.

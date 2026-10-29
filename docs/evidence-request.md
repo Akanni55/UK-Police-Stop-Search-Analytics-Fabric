@@ -30,3 +30,7 @@ Exports must be sanitised for credentials and unnecessary tenant-specific connec
 ## Update — 29 October 2026
 
 Received all six pipeline ZIP exports, the three-layer count screenshot (1,436,597 each), and a seven-procedure catalog screenshot. Pipeline definitions are now sanitised and displayed inline. Full SQL text is still required as a CSV/text export because the screenshot truncates the definition cells. Actual Bronze writer, final report and screenshot-publication approval remain outstanding. A reference-pipeline screenshot is now optional illustration rather than a configuration blocker because the export verifies its activities.
+
+## Documentation completion decision
+
+The owner has supplied the files available and requested completion without further file hunting. Seven full SQL procedure reconstructions and a complete Bronze writer reconstruction are now published inline with explicit provenance. A procedure CSV or original writer export would be optional future verification, not an outstanding blocker for this case-study documentation. Their reconstructed status must not be removed without verification. The remaining delivery item is the report when the owner finishes it; public screenshot publication remains separately subject to the previously requested approval.

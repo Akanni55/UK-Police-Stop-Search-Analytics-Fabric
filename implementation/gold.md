@@ -11,7 +11,7 @@
 | 3 | `gold.usp_LoadProfileDimensions` | Demographic, search-profile and outcome combinations |
 | 4 | `gold.usp_RunFactStopSearchLoad` | Audited call to `gold.usp_LoadFactStopSearch` |
 
-The key-based relationships are shown in the [architecture](../architecture/architecture-overview.md). Code below explains the implemented patterns inline. Full workspace procedure exports are pending; these excerpts are not complete deployment scripts.
+The key-based relationships are shown in the [architecture](../architecture/architecture-overview.md). Code below explains the implemented patterns inline. Full definitions are now available in the [complete procedure reconstruction](complete-procedures.md). The excerpts on this page explain the design; the complete page clearly distinguishes reconstructed code from live exports.
 
 ## Date dimension
 

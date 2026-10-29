@@ -105,3 +105,7 @@ The displayed timings describe individual captures and are not comparative perfo
 The supplied SQL-results screenshot directly shows Bronze, Silver and Gold each at **1,436,597**. The procedure-catalog screenshot shows seven procedures across Silver and Gold, but the displayed definition column is truncated and cannot verify their complete bodies.
 
 Six pipeline exports now confirm the Gold scope root cause: empty literals in the fact activity's ForceId/SourceMonth SQL parameters, despite correct parent mappings. The fix is documented, not deployed. See the [verified pipeline walkthrough](../ingestion/verified-pipelines.md).
+
+## Local reconstruction checks
+
+The reconstructed writer passed Python AST parsing and isolated tests of its Python JSON parser: BOM removal, retained zero-based positions, distinct false/NULL values, valid empty arrays and rejection of error objects, non-object array entries, malformed JSON and non-standard NaN. Static contract checks confirmed 32 Silver insert columns, 26 fact insert columns and seven reconstructed procedures. No PySpark integration test, Warehouse compilation or live deployment was performed; local checks do not validate Fabric runtime behaviour.
