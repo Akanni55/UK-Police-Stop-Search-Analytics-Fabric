@@ -94,3 +94,7 @@ No fully automated monthly API-to-report schedule is documented as complete. Do 
 ## Scope alignment check from supplied evidence
 
 The reviewed Silver audit shows Metropolitan / August 2025 (14,899 records), while the Gold audit captures show NULL force/month (full-scope 1,436,597 records). Verify that `Invoke_Load_Gold` passes both parent parameters and that the Gold fact wrapper receives them through its dynamic expressions. A successful full Gold load is correct for the full scope, but does not demonstrate the intended selected-scope propagation. Avoid describing this evidence as a successful matched-scope end-to-end test until a fresh scoped Gold audit confirms it.
+
+## Export verification — 29 October 2026
+
+Six pipeline templates were reviewed. The exact cause of full Gold reloads is now confirmed: the parent passes the scope correctly, but `SP_Load_FactStopSearch` sends empty literal SQL parameter values. Replace them with the dynamic force/month expressions shown in the [verified pipeline review](../ingestion/verified-pipelines.md). The correction has not been applied to Fabric or proven by a fresh audit yet. Exported processing defaults are Metropolitan / 2025-08, and the invoke activities are newer InvokePipeline activities, not Legacy. Activity retry policies are currently zero; failed historical requests were recovered manually.

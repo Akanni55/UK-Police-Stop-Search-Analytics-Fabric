@@ -60,7 +60,7 @@ A representative dynamic folder expression in the child is:
         '/month=', pipeline().parameters.p_month)
 ```
 
-The destination file is JSON array content. No API pagination was configured for these responses. The complete activity definition and connection configuration await exported pipeline files.
+The destination file is JSON array content. No API pagination was configured for these responses. The exact exported activity is now available in the [sanitised inline pipeline walkthrough](verified-pipelines.md).
 
 ## Historical orchestration and recovery
 
@@ -90,6 +90,10 @@ bronze = exploded.select(
 ```
 
 The file audit table records source path, force, month, validation status, record count, error and check time. The file record-count sum reconciled to 1,436,597 Bronze rows.
+
+## Verified reference orchestration
+
+The reference export confirms forces Copy → availability Copy → Lookup months → sequential monthly crime-category Copy → reference notebook. Thus the current refresh still includes exploratory category work even though the analytical model is Stop and Search only. Isolate those cells and activities before removing that dependency. The request recovery parent reads the retry table, not the full load plan.
 
 ## Replay and limitations
 

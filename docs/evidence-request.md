@@ -26,3 +26,7 @@ Screenshot publication to the public repository is pending explicit approval bec
 6. Final report screenshots and the published report URL when ready.
 
 Exports must be sanitised for credentials and unnecessary tenant-specific connection identifiers. Notebook outputs and Fabric attachment metadata are not included in the inline walkthroughs.
+
+## Update — 29 October 2026
+
+Received all six pipeline ZIP exports, the three-layer count screenshot (1,436,597 each), and a seven-procedure catalog screenshot. Pipeline definitions are now sanitised and displayed inline. Full SQL text is still required as a CSV/text export because the screenshot truncates the definition cells. Actual Bronze writer, final report and screenshot-publication approval remain outstanding. A reference-pipeline screenshot is now optional illustration rather than a configuration blocker because the export verifies its activities.

@@ -4,7 +4,7 @@
 
 ## Read this first
 
-This repository currently provides a technical case study and implementation walkthroughs with inline code. It is **not yet a one-click deployment package**. Two notebook exports have been reviewed: [reference refresh](notebooks/reference-walkthrough.md) and [Stop and Search profiling](notebooks/stop-search-profile-review.md). The latter is not the raw-to-Bronze writer. Pipeline, SQL object and actual Bronze writer exports remain requested. Code excerpts are labelled where they omit surrounding implementation. Do not mistake illustrative fragments for a complete schema deployment.
+This repository currently provides a technical case study and implementation walkthroughs with inline code. It is **not yet a one-click deployment package**. Two notebook exports have been reviewed: [reference refresh](notebooks/reference-walkthrough.md) and [Stop and Search profiling](notebooks/stop-search-profile-review.md). The latter is not the raw-to-Bronze writer. Six pipeline exports are now verified in the [inline configuration walkthrough](ingestion/verified-pipelines.md). SQL object text and the actual Bronze writer remain requested. Code excerpts are labelled where they omit surrounding implementation. Do not mistake illustrative fragments for a complete schema deployment.
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ Use your own workspace and item identifiers. No tenant-specific connection ident
 9. Create the Silver loader and audit wrapper; reconcile the full Silver load.
 10. Create and load Date, Force and the three combination dimensions; create the fact and reconcile its initial load.
 11. Configure Silver and Gold pipelines, then the processing parent; test a selected scope.
-12. Create `SM_Police_StopSearch` over the six Gold tables, add relationships and DAX measures.
+12. Correct the Gold fact parameter mapping described in the verified pipeline review before relying on scoped parent processing. Create `SM_Police_StopSearch` over the six Gold tables, add relationships and DAX measures.
 13. Build the report and verify totals before publishing it as **UK Police Stop and Search Insights**.
 
 See [ingestion](ingestion/api-to-bronze.md), [Silver](implementation/silver.md), [Gold](implementation/gold.md) and [operations](monitoring/operations.md) for the code and reasoning used at each boundary.

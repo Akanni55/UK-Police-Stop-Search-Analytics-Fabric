@@ -99,3 +99,9 @@ Seven screenshots were reviewed on 28 October 2026; images are not yet published
 **Parameter propagation finding:** the Silver audit is scoped while the Gold audit entries are full-scope. These captures confirm correct loads, but do not prove the processing parent passed identical scope parameters to both children. Inspect parent-to-Gold mapping and the Gold fact wrapper inputs, then rerun the selected scope to establish aligned propagation. This is a configuration check, not evidence of a row-count error.
 
 The displayed timings describe individual captures and are not comparative performance benchmarks.
+
+## New reconciliation evidence — 29 October 2026
+
+The supplied SQL-results screenshot directly shows Bronze, Silver and Gold each at **1,436,597**. The procedure-catalog screenshot shows seven procedures across Silver and Gold, but the displayed definition column is truncated and cannot verify their complete bodies.
+
+Six pipeline exports now confirm the Gold scope root cause: empty literals in the fact activity's ForceId/SourceMonth SQL parameters, despite correct parent mappings. The fix is documented, not deployed. See the [verified pipeline walkthrough](../ingestion/verified-pipelines.md).

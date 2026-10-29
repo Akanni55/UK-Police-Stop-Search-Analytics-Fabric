@@ -16,6 +16,7 @@ From a public API to an audited dimensional warehouse: **1,427 force/month files
 | [Architecture and data flow](architecture/architecture-overview.md) | Rendered diagrams, components and engineering decisions |
 | [Setup and reproduction guide](SETUP.md) | Build order, prerequisites and current reproducibility boundaries |
 | [Verified notebook walkthroughs](notebooks/reference-walkthrough.md) | Reference refresh code and [profiling export review](notebooks/stop-search-profile-review.md) |
+| [Verified pipeline definitions](ingestion/verified-pipelines.md) | Six sanitised inline definitions and the confirmed Gold scope correction |
 | [API ingestion walkthrough](ingestion/api-to-bronze.md) | Availability-driven extraction, expressions, raw retention and recovery |
 | [SQL Silver transformation](implementation/silver.md) | JSON parsing, UK time conversion, scoped replacement and reconciliation |
 | [Dimensional warehouse](implementation/gold.md) | Dimension maintenance, null-safe joins and fact loading |
@@ -44,7 +45,7 @@ This project preserves raw responses, converts them into traceable Bronze record
 | Gold fact records | 1,436,597 |
 | Reconciliation difference | 0 |
 
-These are results from the completed project snapshot, not a promise of permanent source availability or complete UK coverage. Counts and successful runs were confirmed during implementation; two notebook exports and seven screenshots have now been reviewed. Verified notebook code is included inline; public publication of the screenshots awaits owner approval.
+These are results from the completed project snapshot, not a promise of permanent source availability or complete UK coverage. Counts and successful runs were confirmed during implementation; two notebook exports, six pipeline exports and nine screenshots have now been reviewed. Verified notebook code is included inline; public publication of the screenshots awaits owner approval.
 
 ## Solution at a glance
 
