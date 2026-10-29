@@ -106,3 +106,9 @@ EXEC gold.usp_RunFactStopSearchLoad
 ```
 
 The wrapper records fact-stage audit status. Dimension activities are monitored in Fabric, not written to the fact audit table. Missing dimension matches, duplicate source positions and zero-source replacement requests are load errors, not instructions to delete existing target data.
+
+## Successful Gold orchestration capture
+
+![Gold pipeline with Date, Force, profile dimensions and fact activities succeeded](../assets/evidence/gold-pipeline-success.png)
+
+*All four stages completed. Activity success does not itself establish that force/month parameters were passed into the fact wrapper; see the separately documented mapping finding.*

@@ -4,7 +4,7 @@
 
 ## Evidence basis
 
-The following results were confirmed during interactive implementation and load testing. They are not results from a repository CI execution. Workspace screenshots and deployable exports remain requested; this page distinguishes those missing artefacts from the confirmed implementation results.
+The following results were confirmed during interactive implementation and load testing. They are not results from a repository CI execution. Nine owner-approved workspace screenshots are now published in the [evidence gallery](../docs/evidence-gallery.md). Verified exports and reconstructed code are labelled separately.
 
 | Validation | Observed result |
 |---|---|
@@ -80,11 +80,11 @@ The sequential historical extraction took many hours and required a four-request
 - Final report screenshots and published URL when available.
 - Sanitised notebook, pipeline and stored-procedure exports.
 
-This repository intentionally does not embed unrelated screenshots or fabricate a report preview.
+The supplied implementation screenshots are now embedded; a report preview will be added only after the owner finishes the report.
 
 ## Additional owner-supplied evidence reviewed
 
-Seven screenshots were reviewed on 28 October 2026; images are not yet published in the repository pending approval for public metadata exposure.
+Seven screenshots were reviewed on 28 October 2026; two additional captures were reviewed on 29 October. All nine are now published with owner approval in the [evidence gallery](../docs/evidence-gallery.md).
 
 | Capture | What it establishes |
 |---|---|
@@ -109,3 +109,9 @@ Six pipeline exports now confirm the Gold scope root cause: empty literals in th
 ## Local reconstruction checks
 
 The reconstructed writer passed Python AST parsing and isolated tests of its Python JSON parser: BOM removal, retained zero-based positions, distinct false/NULL values, valid empty arrays and rejection of error objects, non-object array entries, malformed JSON and non-standard NaN. Static contract checks confirmed 32 Silver insert columns, 26 fact insert columns and seven reconstructed procedures. No PySpark integration test, Warehouse compilation or live deployment was performed; local checks do not validate Fabric runtime behaviour.
+
+## Published reconciliation capture
+
+![Three-layer reconciliation showing 1,436,597 records in each layer](../assets/evidence/three-layer-reconciliation.png)
+
+The procedure-catalog capture is available in the [gallery](../docs/evidence-gallery.md). It proves object visibility, not the complete procedure body or a fresh execution of every procedure.

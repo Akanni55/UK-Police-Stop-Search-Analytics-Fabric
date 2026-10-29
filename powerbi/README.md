@@ -109,3 +109,9 @@ Do not show an unavailable force/month as a proven zero. For demographic compari
 Confirm measure totals against Gold, inspect unknown members, verify slicer direction and distinguish source-month from event-date trends. Add month/day sorting where needed. Hide surrogate keys and technical lineage columns from normal report authoring while retaining them in the model for diagnosis. Model refresh/reframing after warehouse updates must be configured and validated; the processing parent does not yet include a semantic-model refresh activity.
 
 The NULL-date unknown member means the current DimDate calendar column is not ready for a conventional date-table designation without adjustment. Resolve that design before introducing classic year-on-year DAX. RLS and production deployment promotion have not been implemented or claimed.
+
+## Implemented semantic-model evidence
+
+![Power BI model showing the five dimensions related to FactStopSearch](../assets/evidence/semantic-model.png)
+
+*The model relationship layout is implemented. This is a model screenshot, not a completed or published analytical report.*

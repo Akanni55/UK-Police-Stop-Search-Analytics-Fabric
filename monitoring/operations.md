@@ -98,3 +98,13 @@ The reviewed Silver audit shows Metropolitan / August 2025 (14,899 records), whi
 ## Export verification — 29 October 2026
 
 Six pipeline templates were reviewed. The exact cause of full Gold reloads is now confirmed: the parent passes the scope correctly, but `SP_Load_FactStopSearch` sends empty literal SQL parameter values. Replace them with the dynamic force/month expressions shown in the [verified pipeline review](../ingestion/verified-pipelines.md). The correction has not been applied to Fabric or proven by a fresh audit yet. Exported processing defaults are Metropolitan / 2025-08, and the invoke activities are newer InvokePipeline activities, not Legacy. Activity retry policies are currently zero; failed historical requests were recovered manually.
+
+## Published audit evidence
+
+![Silver audit showing scoped Metropolitan August 2025 loads of 14,899 records](../assets/evidence/silver-audit.png)
+
+*Scoped Silver loads succeeded and their Bronze/Silver counts match.*
+
+![Gold audit showing full-scope successful loads of 1,436,597 records](../assets/evidence/gold-audit.png)
+
+*Gold audit scopes are NULL. These are full replacements, not proof of the intended scoped Gold test; the exported mapping correction remains to be confirmed.*

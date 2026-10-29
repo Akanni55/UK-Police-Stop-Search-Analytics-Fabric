@@ -14,7 +14,7 @@
 - Reference notebook export: code reproduced inline in the [verified walkthrough](../notebooks/reference-walkthrough.md).
 - Stop and Search notebook export: currently profiling code, reviewed [here](../notebooks/stop-search-profile-review.md).
 
-Screenshot publication to the public repository is pending explicit approval because Fabric metadata is visible. No screenshot images are embedded until that approval is resolved.
+Screenshot publication was explicitly approved by the owner and is complete; see the [evidence gallery](evidence-gallery.md).
 
 ## Still requested
 
@@ -33,4 +33,8 @@ Received all six pipeline ZIP exports, the three-layer count screenshot (1,436,5
 
 ## Documentation completion decision
 
-The owner has supplied the files available and requested completion without further file hunting. Seven full SQL procedure reconstructions and a complete Bronze writer reconstruction are now published inline with explicit provenance. A procedure CSV or original writer export would be optional future verification, not an outstanding blocker for this case-study documentation. Their reconstructed status must not be removed without verification. The remaining delivery item is the report when the owner finishes it; public screenshot publication remains separately subject to the previously requested approval.
+The owner has supplied the files available and requested completion without further file hunting. Seven full SQL procedure reconstructions and a complete Bronze writer reconstruction are now published inline with explicit provenance. A procedure CSV or original writer export would be optional future verification, not an outstanding blocker for this case-study documentation. Their reconstructed status must not be removed without verification. The remaining delivery item is the report when the owner finishes it; public screenshot publication has been approved and completed.
+
+## Screenshot publication completed
+
+The owner explicitly approved public publication on 29 October 2026. All nine supplied screenshots are now published and captioned in the [evidence gallery](evidence-gallery.md). Earlier references to pending screenshot approval are historical and resolved. The Power BI report remains in progress; code reconstructions remain labelled as reconstructions.

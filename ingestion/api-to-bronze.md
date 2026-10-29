@@ -104,3 +104,13 @@ Source revisions are not versioned immutably by the current force/month path. Ad
 ## Complete writer reconstruction now available
 
 A [complete reconstructed Bronze writer](../notebooks/bronze-writer-reconstruction.md) now implements the established lineage contract from retained JSON. It is not the recovered historical notebook: the supplied export lacks those cells. It performs a guarded full-snapshot overwrite and is not an incremental ingestion component. No existing Fabric data was changed. Validate in an isolated Lakehouse before adoption; no further owner file search is required for this documentation pass.
+
+## Published ingestion evidence
+
+![Ingestion parent showing a successful short recovery run](../assets/evidence/ingestion-recovery-success.png)
+
+*This is the reduced recovery run. It is not a screenshot of the complete 1,427-request historical extraction.*
+
+![API child with Copy activity and force/month string parameters](../assets/evidence/api-child-parameters.png)
+
+*The Northumbria/August 2026 defaults are example input values, not a regional restriction on the availability-driven historical scope.*

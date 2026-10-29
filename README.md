@@ -47,7 +47,7 @@ This project preserves raw responses, converts them into traceable Bronze record
 | Gold fact records | 1,436,597 |
 | Reconciliation difference | 0 |
 
-These are results from the completed project snapshot, not a promise of permanent source availability or complete UK coverage. Counts and successful runs were confirmed during implementation; two notebook exports, six pipeline exports and nine screenshots have now been reviewed. Verified notebook code is included inline; public publication of the screenshots awaits owner approval.
+These are results from the completed project snapshot, not a promise of permanent source availability or complete UK coverage. Counts and successful runs were confirmed during implementation; two notebook exports, six pipeline exports and nine screenshots have now been reviewed. Verified notebook code is included inline; all nine owner-approved screenshots are now published in the [evidence gallery](docs/evidence-gallery.md).
 
 ## Solution at a glance
 
@@ -66,6 +66,16 @@ flowchart TD
 ```
 
 **Automation boundary:** the tested processing parent runs existing **Bronze → Silver → Gold**. API ingestion and raw-to-Bronze preparation remain separate components; a fully scheduled source-to-report monthly workflow is future work.
+
+## Verified execution and reconciliation
+
+![Processing parent showing successful Silver and Gold invocations](assets/evidence/processing-parent-success.png)
+
+*Successful ordered processing of existing Bronze data through Silver and Gold; this parent does not perform API ingestion.*
+
+![Query results showing 1,436,597 records in Bronze, Silver and Gold](assets/evidence/three-layer-reconciliation.png)
+
+*The captured three-layer reconciliation shows zero row-count difference. See the [full evidence gallery](docs/evidence-gallery.md) for audit scope and configuration findings.*
 
 ## Engineering decisions worth inspecting
 
